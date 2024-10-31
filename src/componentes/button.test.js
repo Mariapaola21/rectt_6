@@ -1,12 +1,13 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
-import App from "./App"; // Asegúrate de que la ruta es correcta
+import Botones from "./button";
 
-test("renderiza el componente Botones y cambia el texto al hacer clic", async () => {
-  // Renderiza el componente App
-  render(<App />);
 
-  // Encuentra el botón por el texto inicial
+test("boton que cambiara correctamente al hacerle click", async () => {
+  // Renderiza el componente botones
+  render(<Botones />);
+
+  // Encontrar el botón por el texto inicial
   const buttonElement = screen.getByText("haz click aqui");
 
   // Verifica que el texto inicial es el correcto
